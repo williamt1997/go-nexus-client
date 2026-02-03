@@ -41,7 +41,7 @@ func getTestNpmProxyRepository(name string) repository.NpmProxyRepository {
 		},
 
 		Npm: &repository.Npm{
-			RemoveQuarantined: true,
+			RemoveQuarantined: false,
 		},
 	}
 }
