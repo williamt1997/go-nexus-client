@@ -24,7 +24,7 @@ type MavenContentDisposition string
 type MavenGroupRepository struct {
 	Name   string `json:"name"`
 	Online bool   `json:"online"`
-	Maven  *Maven `json:"maven,omitempty"` // Optional because a GET against Nexus API don't return the maven configuration object
+	Maven  `json:"maven"`
 
 	Group   `json:"group"`
 	Storage `json:"storage"`

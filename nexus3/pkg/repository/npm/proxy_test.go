@@ -41,8 +41,7 @@ func getTestNpmProxyRepository(name string) repository.NpmProxyRepository {
 		},
 
 		Npm: &repository.Npm{
-			RemoveNonCataloged: false, // deprecated since nexus 3.66.0
-			RemoveQuarantined:  true,
+			RemoveQuarantined: true,
 		},
 	}
 }
