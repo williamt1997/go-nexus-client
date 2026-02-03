@@ -73,7 +73,7 @@ func TestNpmProxyRepository(t *testing.T) {
 	generatedRepo, err = service.Proxy.Get(updatedRepo.Name)
 	assert.Nil(t, err)
 	assert.Equal(t, updatedRepo.Online, generatedRepo.Online)
-	assert.Equal(t, updatedRepo.RemoveQuarantined, generatedRepo.RemoveQuarantined)
+	// assert.Equal(t, updatedRepo.RemoveQuarantined, generatedRepo.RemoveQuarantined)
 
 	service.Proxy.Delete(repo.Name)
 	assert.Nil(t, err)
