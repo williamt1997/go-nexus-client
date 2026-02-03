@@ -3,8 +3,8 @@ package maven
 import (
 	"testing"
 
-	"github.com/datadrivers/go-nexus-client/nexus3/schema/repository"
 	"github.com/stretchr/testify/assert"
+	"github.com/williamt1997/go-nexus-client/nexus3/schema/repository"
 )
 
 func getTestMavenGroupRepository(name string) repository.MavenGroupRepository {
@@ -18,6 +18,10 @@ func getTestMavenGroupRepository(name string) repository.MavenGroupRepository {
 		Storage: repository.Storage{
 			BlobStoreName:               "default",
 			StrictContentTypeValidation: true,
+		},
+		Maven: repository.Maven{
+			VersionPolicy: repository.MavenVersionPolicySnapshot,
+			LayoutPolicy:  repository.MavenLayoutPolicyStrict,
 		},
 	}
 }
@@ -44,21 +48,12 @@ func TestMavenGroupRepository(t *testing.T) {
 
 	updatedRepo := repo
 	updatedRepo.Online = false
-	contentDisposition := repository.MavenContentDispositionAttachment
-	maven := repository.Maven{
-		VersionPolicy:      repository.MavenVersionPolicyMixed,
-		LayoutPolicy:       repository.MavenLayoutPolicyStrict,
-		ContentDisposition: &contentDisposition,
-	}
-	updatedRepo.Maven = &maven
 
 	err = service.Group.Update(repo.Name, updatedRepo)
 	assert.Nil(t, err)
 	generatedRepo, err = service.Group.Get(updatedRepo.Name)
 	assert.Nil(t, err)
 	assert.Equal(t, updatedRepo.Online, generatedRepo.Online)
-	// Deactivated because a GET against Nexus API don't return the maven configuration object
-	// assert.Equal(t, updatedRepo.Maven, generatedRepo.Maven)
 
 	service.Group.Delete(repo.Name)
 	assert.Nil(t, err)

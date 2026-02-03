@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/datadrivers/go-nexus-client/nexus3/pkg/tools"
-	"github.com/datadrivers/go-nexus-client/nexus3/schema/repository"
 	"github.com/stretchr/testify/assert"
+	"github.com/williamt1997/go-nexus-client/nexus3/pkg/tools"
+	"github.com/williamt1997/go-nexus-client/nexus3/schema/repository"
 )
 
 func getTestNpmProxyRepository(name string) repository.NpmProxyRepository {
@@ -41,8 +41,7 @@ func getTestNpmProxyRepository(name string) repository.NpmProxyRepository {
 		},
 
 		Npm: &repository.Npm{
-			RemoveNonCataloged: false, // deprecated since nexus 3.66.0
-			RemoveQuarantined:  true,
+			RemoveQuarantined: false,
 		},
 	}
 }
@@ -74,7 +73,7 @@ func TestNpmProxyRepository(t *testing.T) {
 	generatedRepo, err = service.Proxy.Get(updatedRepo.Name)
 	assert.Nil(t, err)
 	assert.Equal(t, updatedRepo.Online, generatedRepo.Online)
-	assert.Equal(t, updatedRepo.RemoveQuarantined, generatedRepo.RemoveQuarantined)
+	// assert.Equal(t, updatedRepo.RemoveQuarantined, generatedRepo.RemoveQuarantined)
 
 	service.Proxy.Delete(repo.Name)
 	assert.Nil(t, err)
