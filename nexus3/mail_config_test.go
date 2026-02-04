@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema"
 )
 
 func testMailConfig(enabled *bool, host string, port int, username *string, password *string, fromAddress string, subjectPrefix *string) *schema.MailConfig {

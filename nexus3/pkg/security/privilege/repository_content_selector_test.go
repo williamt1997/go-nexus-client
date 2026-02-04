@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/security"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/security/privilege"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/tools"
-	schemasecurity "github.com/williamt1997/go-nexus-client/nexus3/schema/security"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/security"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/security/privilege"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/tools"
+	schemasecurity "github.com/williamt1997/go-nexus-client/v2/nexus3/schema/security"
 )
 
 func getTestPrivilegeRepositoryContentSelector(name string, description string, actions []schemasecurity.SecurityPrivilegeRepositoryContentSelectorActions, format string, repository string, contentSelector string) *schemasecurity.PrivilegeRepositoryContentSelector {

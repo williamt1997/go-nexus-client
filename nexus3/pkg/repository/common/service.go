@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/client"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/tools"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/client"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/tools"
 )
 
 type RepositoryService[R any] struct {

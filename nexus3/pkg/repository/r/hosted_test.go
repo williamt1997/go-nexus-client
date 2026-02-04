@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema/repository"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema/repository"
 )
 
 func getTestRHostedRepository(name string) repository.RHostedRepository {

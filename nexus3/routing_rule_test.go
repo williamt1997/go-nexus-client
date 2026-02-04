@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema"
 )
 
 func testRoutingRule(name string, mode schema.RoutingRuleMode) *schema.RoutingRule {

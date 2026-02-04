@@ -1,4 +1,4 @@
-module github.com/williamt1997/go-nexus-client
+module github.com/williamt1997/go-nexus-client/v2
 
 go 1.19
 

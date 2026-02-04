@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/williamt1997/go-nexus-client/nexus3"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/tools"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema/repository"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/tools"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema/repository"
 )
 
 func getTestAptProxyRepository(name string) repository.AptProxyRepository {

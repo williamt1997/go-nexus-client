@@ -1,12 +1,12 @@
 package nexus3
 
 import (
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/cleanup"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/client"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/iq"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/readonly"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/repository"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/security"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/cleanup"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/client"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/iq"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/readonly"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/repository"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/security"
 )
 
 const (

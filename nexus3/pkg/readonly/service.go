@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/client"
-	"github.com/williamt1997/go-nexus-client/nexus3/schema/readonly"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/client"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema/readonly"
 )
 
 const (

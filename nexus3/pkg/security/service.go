@@ -1,8 +1,8 @@
 package security
 
 import (
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/client"
-	"github.com/williamt1997/go-nexus-client/nexus3/pkg/security/privilege"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/client"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/pkg/security/privilege"
 )
 
 const (

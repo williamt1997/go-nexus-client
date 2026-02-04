@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/williamt1997/go-nexus-client/nexus3/schema/security"
+	"github.com/williamt1997/go-nexus-client/v2/nexus3/schema/security"
 )
 
 func NewCertificateRequest(proxyUrl string) (*security.CertificateRequest, error) {
