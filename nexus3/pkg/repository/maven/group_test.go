@@ -19,7 +19,7 @@ func getTestMavenGroupRepository(name string) repository.MavenGroupRepository {
 			BlobStoreName:               "default",
 			StrictContentTypeValidation: true,
 		},
-		Maven: repository.Maven{
+		Maven: &repository.Maven{
 			VersionPolicy: repository.MavenVersionPolicySnapshot,
 			LayoutPolicy:  repository.MavenLayoutPolicyStrict,
 		},
