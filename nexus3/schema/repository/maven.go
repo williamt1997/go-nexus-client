@@ -24,7 +24,7 @@ type MavenContentDisposition string
 type MavenGroupRepository struct {
 	Name   string `json:"name"`
 	Online bool   `json:"online"`
-	Maven  `json:"maven"`
+	Maven  *Maven `json:"maven,omitempty"`
 
 	Group   `json:"group"`
 	Storage `json:"storage"`
